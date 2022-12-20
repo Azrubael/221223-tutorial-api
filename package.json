@@ -1,0 +1,17 @@
+{
+  "name": "tutorial-api-nodejs",
+  "version": "1.0.0",
+  "description": "Tutorial API 4Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "typescript",
+    "API",
+    "education"
+    ],
+  "author": "Azrubael",
+  "license": "ISC"
+}
