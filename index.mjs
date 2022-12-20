@@ -1,24 +1,15 @@
-import http from 'http'
+// сложная логика потребует ветвления switch/case
+// поэтому в любом случае требуется дополнительная абстракция
+// import http from 'http'
+import express from 'express'
 
-const host = 'localhost'
 const port = 9001
+const app = express()
 
-const server = http.createServer((req, res) => {
-   // сложная логика потребует ветвления switch/case
-   // поэтому в любом случае требуется дополнительная абстракция
-   switch (req.method) {
-      case 'GET':
-         switch (req.url) {
-            case '/hello':
-               res.statusCode = 200
-               res.setHeader('Content-Type', 'text/plain')
-               res.end('Запуск сервера завершен успешно')
-               break               
-         }
-         break
-   }
+app.get('/hello', (req, res) => {
+   res.send('Запуск сервера завершен успешно')
 })
 
-server.listen(port, host, () => {
-   console.log(`Сервер запущен на ${host}:${port}`)
+app.listen(port, () => {
+   console.log(`Сервер запущен на http://localhost:${port}`)
 })
