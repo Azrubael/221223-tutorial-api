@@ -51,4 +51,9 @@ no changes added to commit (use "git add" and/or "git commit -a")
 	$ npm run build
 	$ npm start
 Создаем в './src/app.ts' класс 'App'
+	$ git add .
+	$ git commit -m "Lesson #063. New class App. All works on TypeScript"
+Добавляем логгер 'tslog' (простая наивная имплементация и примитивное dependency injection)
+	$ npm install tslog
+	 
 
