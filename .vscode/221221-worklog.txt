@@ -1,0 +1,38 @@
+2022-12-20 = Начало повторной проработки для закрепления материала
+*******************************************************************
+commit a68f3ff7f5646c59499b6ae526b82adb937bfdfb (HEAD -> master)
+Author: Azrubael <i0638464000@gmail.com>
+Date:   Tue Dec 20 22:30:04 2022 +0200
+    Lesson #048. Simple routing with callbacks
+
+commit 43416a981e9c7bbf663a24135ff99e91cbc4eda9
+Author: Azrubael <i0638464000@gmail.com>
+Date:   Tue Dec 20 22:16:20 2022 +0200
+    Lesson #047. Simple server with express
+
+commit f275feea83e7aba332bd77d06e4f1fb42651681f
+Author: Azrubael <i0638464000@gmail.com>
+Date:   Tue Dec 20 21:53:40 2022 +0200
+    Lesson #046. Simple server with switch|case example
+
+commit 4e1709922f2205e60bf9f3852eb4a0461a195d88
+Author: Azrubael <i0638464000@gmail.com>
+Date:   Tue Dec 20 21:50:10 2022 +0200
+    Lesson #046. Simplest http server
+
+2022-12-21 = Откат на один коммит, форк, дальнейшая работа
+*******************************************************************
+	$ git reset 43416a981e9c7bbf663a24135ff99e91cbc4eda9
+Откат на один коммит до "Lesson #047. Simple server with express"
+	$ git branch develop
+Форк новой ветки 'develop'
+	$ git switch develop
+Переключение на новую ветку 'develop'
+	$ git branch
+Проверка текущего состояния веток
+	$ git restore .
+Обновление состояния файлов
+	$ git add .
+	$ git commit -m "Before Lesson #049. New branch 'develop'"
+	$ git branch -M main
+	
