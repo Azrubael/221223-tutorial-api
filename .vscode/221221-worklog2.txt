@@ -45,5 +45,10 @@ no changes added to commit (use "git add" and/or "git commit -a")
 	$ npm install -D typescript @types/express
 Исправляем файлы *.mjs  => *.ts, доюавляем типизацию и пересохраняем
 	$ tsc			// компилируем приложение
-
+	git commit -m "Lesson #053. Switchin to typescript. All checked and tuned"
+Переносим структуру папок в './src'
+Добавляем в 'package.json' макросы "build" и "start"
+	$ npm run build
+	$ npm start
+Создаем в './src/app.ts' класс 'App'
 
