@@ -1,0 +1,49 @@
+2022-12-21 После восстановления коммитов 'git reflog'
+=====================================================
+* 28287e7 (HEAD) Lesson #050. Simple router
+* 33786c7 Before Lesson #049. New branch 'main'
+| * 2d3df57 (main) Before Lesson #049. New branch 'main'
+|/
+* 43416a9 (root) Lesson #047. Simple server with express
+* f275fee Lesson #046. Simple server with switch|case example
+* 4e17099 Lesson #046. Simplest http server
+
+	$ git status
+HEAD detached from 2d3df57
+You are currently bisecting, started from branch 'main'.
+  (use "git bisect reset" to get back to the original branch)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .vscode/045-083api.code-workspace
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .vscode/221221-worklog2.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+==============продолжение===========
+
+	$ git branch -m master fork-050
+	$ git branch
+	$ git add .
+	$ git commit -n "Lesson #050. Middleware handlers"
+	$ git log --oneline --decorate --graph --all
+* f7008c7 (HEAD -> fork-050) Lesson #050. Middleware handlers
+* 28287e7 (main) Lesson #050. Simple router
+* 33786c7 Before Lesson #049. New branch 'main'
+* 43416a9 (root) Lesson #047. Simple server with express
+* f275fee Lesson #046. Simple server with switch|case example
+* 4e17099 Lesson #046. Simplest http server
+	
+============== работа над веткой fork-050 =======
+	$ npm install -D typescript
+	$ tsc --init
+заменил 'tsconfig.json' готовым прототипом из проекта '068-072'
+Затем устанавливаем заголовочные файлы с объявлением типов. 'express' - старый фреймворк, поэтому для него эти элементы требуется прикручивать отдельно
+	$ npm install -D typescript @types/express
+Исправляем файлы *.mjs  => *.ts, доюавляем типизацию и пересохраняем
+	$ tsc			// компилируем приложение
+
+
