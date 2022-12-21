@@ -35,4 +35,115 @@ Date:   Tue Dec 20 21:50:10 2022 +0200
 	$ git add .
 	$ git commit -m "Before Lesson #049. New branch 'develop'"
 	$ git branch -M main
-	
+	$ git branch -m master root
+	$ git checkout a68f3ff7f5646c59499b6ae526b82adb937bfdfb
+	$ git log --oneline --decorate --graph --all
+* 33786c7 (main) Before Lesson #049. New branch 'main'
+| * a68f3ff (HEAD) Lesson #048. Simple routing with callbacks
+|/
+* 43416a9 (root) Lesson #047. Simple server with express
+* f275fee Lesson #046. Simple server with switch|case example
+* 4e17099 Lesson #046. Simplest http server
+	$ git -C "e:/IT/[JS]-code/221129-demo/045-083api" -c "core.editor=code --wait --reuse-window" reset 33786c7b12e7d03edd3ffd4b2d24fff9dd984398
+	// Выше показан вызов резет через VSCode
+	$ git restore .
+	$ git log --oneline --decorate --graph --all
+* 33786c7 (HEAD, main) Before Lesson #049. New branch 'main' 
+* 43416a9 (root) Lesson #047. Simple server with express     
+* f275fee Lesson #046. Simple server with switch|case example
+* 4e17099 Lesson #046. Simplest http server
+
+2022-12-21 = Продолжение работы над проектом
+*******************************************************************
+После перезагрузки компьютера потеряны последние коммиты на каждой ветке
+
+PS E:\IT\[JS]-code\221129-demo\045-083api> git reflog
+2d3df57 (HEAD, main) HEAD@{0}: checkout: moving from main to 2d3df57f8b0684a4332f8d29de37dc9059f56c4e
+2d3df57 (HEAD, main) HEAD@{1}: checkout: moving from root to main
+43416a9 (root) HEAD@{2}: checkout: moving from 43416a981e9c7bbf663a24135ff99e91cbc4eda9 to root
+43416a9 (root) HEAD@{3}: checkout: moving from root to 43416a981e9c7bbf663a24135ff99e91cbc4eda9
+43416a9 (root) HEAD@{4}: checkout: moving from 2d3df57f8b0684a4332f8d29de37dc9059f56c4e to root
+2d3df57 (HEAD, main) HEAD@{5}: checkout: moving from main to 2d3df57f8b0684a4332f8d29de37dc9059f56c4e
+2d3df57 (HEAD, main) HEAD@{6}: checkout: moving from root to main
+43416a9 (root) HEAD@{7}: checkout: moving from main to root
+2d3df57 (HEAD, main) HEAD@{8}: commit (amend): Before Lesson #049. New branch 'main'
+33786c7 HEAD@{9}: checkout: moving from root to main
+:...skipping...
+2d3df57 (HEAD, main) HEAD@{0}: checkout: moving from main to 2d3df57f8b0684a4332f8d29de37dc9059f56c4e
+2d3df57 (HEAD, main) HEAD@{1}: checkout: moving from root to main
+43416a9 (root) HEAD@{2}: checkout: moving from 43416a981e9c7bbf663a24135ff99e91cbc4eda9 to root      
+43416a9 (root) HEAD@{3}: checkout: moving from root to 43416a981e9c7bbf663a24135ff99e91cbc4eda9      
+43416a9 (root) HEAD@{4}: checkout: moving from 2d3df57f8b0684a4332f8d29de37dc9059f56c4e to root      
+2d3df57 (HEAD, main) HEAD@{5}: checkout: moving from main to 2d3df57f8b0684a4332f8d29de37dc9059f56c4e
+2d3df57 (HEAD, main) HEAD@{6}: checkout: moving from root to main
+43416a9 (root) HEAD@{7}: checkout: moving from main to root
+2d3df57 (HEAD, main) HEAD@{8}: commit (amend): Before Lesson #049. New branch 'main'
+33786c7 HEAD@{9}: checkout: moving from root to main
+43416a9 (root) HEAD@{10}: checkout: moving from 0e09e551b5fd2eb9ed8b0c52bfcafec81b719b43 to root
+0e09e55 HEAD@{11}: commit: Lesson #050. Simple router
+33786c7 HEAD@{12}: reset: moving to 33786c7b12e7d03edd3ffd4b2d24fff9dd984398
+0451468 HEAD@{13}: commit (amend): Lesson #048. Simple routing with callbacks
+a68f3ff HEAD@{14}: checkout: moving from 33786c7b12e7d03edd3ffd4b2d24fff9dd984398 to a68f3ff7f5646c59499b6ae526b82adb937bfdfb
+33786c7 HEAD@{15}: checkout: moving from main to 33786c7b12e7d03edd3ffd4b2d24fff9dd984398       
+33786c7 HEAD@{16}: checkout: moving from 43416a981e9c7bbf663a24135ff99e91cbc4eda9 to main       
+43416a9 (root) HEAD@{17}: checkout: moving from root to 43416a981e9c7bbf663a24135ff99e91cbc4eda9
+43416a9 (root) HEAD@{18}: checkout: moving from main to root
+33786c7 HEAD@{19}: checkout: moving from master to main
+43416a9 (root) HEAD@{20}: checkout: moving from main to master
+33786c7 HEAD@{21}: commit (amend): Before Lesson #049. New branch 'main'
+30dfde1 HEAD@{22}: commit (amend): Before Lesson #049. New branch 'main'
+d1b6b79 HEAD@{23}: Branch: renamed refs/heads/develop to refs/heads/main
+d1b6b79 HEAD@{25}: commit: Before Lesson #049. New branch 'develop'
+43416a9 (root) HEAD@{26}: checkout: moving from master to develop
+43416a9 (root) HEAD@{27}: checkout: moving from 43416a981e9c7bbf663a24135ff99e91cbc4eda9 to master 
+43416a9 (root) HEAD@{28}: checkout: moving from develop to 43416a981e9c7bbf663a24135ff99e91cbc4eda9
+43416a9 (root) HEAD@{29}: checkout: moving from master to develop
+43416a9 (root) HEAD@{30}: reset: moving to 43416a981e9c7bbf663a24135ff99e91cbc4eda9
+a68f3ff HEAD@{31}: reset: moving to a68f3ff7f5646c59499b6ae526b82adb937bfdfb       
+43416a9 (root) HEAD@{32}: reset: moving to 43416a981e9c7bbf663a24135ff99e91cbc4eda9
+a68f3ff HEAD@{33}: reset: moving to a68f3ff7f5646c59499b6ae526b82adb937bfdfb       
+f275fee HEAD@{34}: checkout: moving from master to master
+f275fee HEAD@{35}: checkout: moving from master to master
+f275fee HEAD@{36}: reset: moving to 43416a981e9c7bbf663a24135ff99e91cbc4eda9^      
+a68f3ff HEAD@{37}: commit: Lesson #048. Simple routing with callbacks
+43416a9 (root) HEAD@{38}: commit: Lesson #047. Simple server with express
+f275fee HEAD@{39}: commit (amend): Lesson #046. Simple server with switch|case example
+c035f36 HEAD@{40}: commit (amend): Lesson #046. Simple server with switch|case example
+8e59655 HEAD@{41}: commit: Lesson #046. Simple server with switch|case example
+4e17099 HEAD@{42}: commit (initial): Lesson #046. Simplest http server
+
+
+Set-Location -LiteralPath e:\IT\[JS]-code\221129-demo\045-083api
+
+
+
+PS E:\IT\[JS]-code\221129-demo\045-083api> git log --graph --decorate --all
+* commit 2d3df57f8b0684a4332f8d29de37dc9059f56c4e (main)
+| Author: Azrubael <i0638464000@gmail.com>
+| Date:   Wed Dec 21 11:57:19 2022 +0200
+|     Before Lesson #049. New branch 'main'
+|
+| * commit 0e09e551b5fd2eb9ed8b0c52bfcafec81b719b43 (HEAD)
+| | Author: Azrubael <i0638464000@gmail.com>
+| | Date:   Wed Dec 21 12:53:18 2022 +0200
+| |     Lesson #050. Simple router
+| |
+| * commit 33786c7b12e7d03edd3ffd4b2d24fff9dd984398
+|/  Author: Azrubael <i0638464000@gmail.com>
+|   Date:   Wed Dec 21 11:57:19 2022 +0200
+|       Before Lesson #049. New branch 'main'
+|
+* commit 43416a981e9c7bbf663a24135ff99e91cbc4eda9 (root)
+| Author: Azrubael <i0638464000@gmail.com>
+| Date:   Tue Dec 20 22:16:20 2022 +0200
+|     Lesson #047. Simple server with express
+|
+* commit f275feea83e7aba332bd77d06e4f1fb42651681f
+| Author: Azrubael <i0638464000@gmail.com>
+| Date:   Tue Dec 20 21:53:40 2022 +0200
+|     Lesson #046. Simple server with switch|case example
+| 
+* commit 4e1709922f2205e60bf9f3852eb4a0461a195d88
+  Author: Azrubael <i0638464000@gmail.com>
+  Date:   Tue Dec 20 21:50:10 2022 +0200
+      Lesson #046. Simplest http server
