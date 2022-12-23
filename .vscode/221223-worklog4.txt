@@ -1,0 +1,54 @@
+2022-12-23
+=================
+Пройден урок "065 Базовый класс контроллера.mp4"
+	$ Set-Location -LiteralPath e:\IT\[JS]-code\221129-demo\045-083api
+	$ git add .
+	$ git commit -m "Lesson #065. Added 'base-controller.ts' & 'routes-interface.ts'"
+	$ git remote add origin https://github.com/Azrubael/221223-tutorial-api.git
+	$ git push --all origin
+	$ git log --decorate --graph --all
+* commit a35fcaab7dfa244c017a6318adb835eb5315cf8a (HEAD -> main, origin/main)
+| Author: Azrubael <i0638464000@gmail.com>
+| Date:   Fri Dec 23 11:12:39 2022 +0200
+|     Lesson #065. Added 'base-controller.ts' & 'routes-interface.ts'        
+| 
+* commit bc6558b36b1a404b737a7e6cd1b98bf81cc4a33c
+| Author: Azrubael <i0638464000@gmail.com>
+| Date:   Wed Dec 21 21:58:02 2022 +0200
+|     Lesson #064. Added class 'Logger'. The first and simplest dependency injection of it in module 'main.ts'
+|
+* commit 2842743b77a981e70cf9e6bbedd9ee80af35dcaa
+| Author: Azrubael <i0638464000@gmail.com>
+| Date:   Wed Dec 21 21:02:30 2022 +0200
+|     Lesson #063. New class App. All works on TypeScript
+|
+* commit 7c1ecf73bdb66ab97d6c4783b740d7c66d144fe3
+| Author: Azrubael <i0638464000@gmail.com>
+| Date:   Wed Dec 21 20:25:46 2022 +0200
+|     Lesson #053. Switching to TypeScript. All checked and well tuned
+|
+| * commit c24c5c8e02d9b3f1c0ad1c6f1c36b3492d4c3115 (origin/fork-050, fork-050)
+|/  Author: Azrubael <i0638464000@gmail.com>
+|   Date:   Wed Dec 21 19:14:11 2022 +0200
+|       Lesson #050. Middleware handlers
+|
+* commit 28287e724f0821f14650c3ac794a9b70ba295099
+| Author: Azrubael <i0638464000@gmail.com>
+| Date:   Wed Dec 21 12:53:18 2022 +0200
+|     Lesson #050. Simple router
+|
+* commit 33786c7b12e7d03edd3ffd4b2d24fff9dd984398
+| Author: Azrubael <i0638464000@gmail.com>
+| Date:   Wed Dec 21 11:57:19 2022 +0200
+|     Before Lesson #049. New branch 'main'
+|
+| * commit 04514687b7eb95a86d3bc1e45ef231767a14222c (origin/fork-048, fork-048)
+|/  Author: Azrubael <i0638464000@gmail.com>
+|   Date:   Tue Dec 20 22:30:04 2022 +0200
+|       Lesson #048. Simple routing with callbacks
+|
+* commit 43416a981e9c7bbf663a24135ff99e91cbc4eda9 (origin/root, root)
+| Author: Azrubael <i0638464000@gmail.com>
+| Date:   Tue Dec 20 22:16:20 2022 +0200
+|     Lesson #047. Simple server with express
+...

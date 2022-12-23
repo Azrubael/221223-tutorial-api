@@ -28,7 +28,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 	$ git branch -m master fork-050
 	$ git branch
 	$ git add .
-	$ git commit -n "Lesson #050. Middleware handlers"
+	$ git commit -m "Lesson #050. Middleware handlers"
 	$ git log --oneline --decorate --graph --all
 * f7008c7 (HEAD -> fork-050) Lesson #050. Middleware handlers
 * 28287e7 (main) Lesson #050. Simple router
