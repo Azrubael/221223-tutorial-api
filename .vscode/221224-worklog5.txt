@@ -43,5 +43,88 @@ Composition Root - точка сбора всех зависимостей
 	$ git switch main
 	$ git log --oneline --decorate --graph --all
 
+PS E:\IT\[JS]-code\221129-demo\045-083api> git reflog
+78e9de2 (fork-069) HEAD@{1}: commit: Lesson #069. Decorators @Logger, @Component, @Prop ana15fce3 HEAD@{2}: commit: Lesson #069. Decorators @Logger, @Component and @Method
+a42227d HEAD@{3}: checkout: moving from main to fork-069
+fa6968d (HEAD -> main) HEAD@{4}: checkout: moving from fork-069 to main
+a42227d HEAD@{5}: commit: Lesson #069. Decorators testing
+fa6968d (HEAD -> main) HEAD@{6}: checkout: moving from main to fork-069
+fa6968d (HEAD -> main) HEAD@{7}: commit: Lesson #067. Errod handlers added and checked    
+32c9cc5 (origin/main) HEAD@{8}: commit: Lesson #066. Users-controller. The exercise       
+a35fcaa HEAD@{9}: commit (amend): Lesson #065. Added 'base-controller.ts' & 'routes-interface.ts'
+43d02ec HEAD@{10}: commit: Lesson #065. Added 'base-controller.ts' & 'routes-interface.ts'bc6558b HEAD@{11}: checkout: moving from 33786c7b12e7d03edd3ffd4b2d24fff9dd984398 to main 
+33786c7 HEAD@{12}: checkout: moving from 04514687b7eb95a86d3bc1e45ef231767a14222c to 337860451468 (origin/fork-048, fork-048) HEAD@{13}: checkout: moving from root to 0451468      
+43416a9 (origin/root, root) HEAD@{14}: checkout: moving from main to root
+bc6558b HEAD@{15}: commit: Lesson #064. Added class 'Logger'. The first and simplest dependency injection of it in module 'main.ts'
+2842743 HEAD@{16}: commit: Lesson #063. New class App. All works on TypeScript
+7c1ecf7 HEAD@{17}: commit (amend): Lesson #053. Switching to TypeScript. All checked and well tuned
+cf82b00 HEAD@{18}: commit (amend): Lesson #053. Switchin to TypeScript. All checked and well tuned
+adb5c46 HEAD@{19}: commit: Lesson #053. Switchin to typescript. All checked and tuned     
+28287e7 HEAD@{20}: checkout: moving from fork-050 to main
+c24c5c8 (origin/fork-050, fork-050) HEAD@{21}: commit (amend): Lesson #050. Middleware handlers
+f7008c7 HEAD@{22}: commit: Lesson #050. Middleware handlers
+28287e7 HEAD@{23}: checkout: moving from main to fork-050
+28287e7 HEAD@{24}: reset: moving to 28287e724f0821f14650c3ac794a9b70ba295099
+2d3df57 HEAD@{25}: checkout: moving from 28287e724f0821f14650c3ac794a9b70ba295099 to main 
+28287e7 HEAD@{26}: commit (amend): Lesson #050. Simple router
+0e09e55 HEAD@{27}: reset: moving to 0e09e55
+2d3df57 HEAD@{28}: checkout: moving from main to 2d3df57f8b0684a4332f8d29de37dc9059f56c4e 
+PS E:\IT\[JS]-code\221129-demo\045-083api> git stash list
+stash@{0}: WIP on main: fa6968d Lesson #067. Errod handlers added and checked
+PS E:\IT\[JS]-code\221129-demo\045-083api> git stash pop
+error: Your local changes to the following files would be overwritten by merge:
+        .vscode/221224-worklog5.txt
+Please commit your changes or stash them before you merge.
+Aborting
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .vscode/221224-worklog5.txt
 
+no changes added to commit (use "git add" and/or "git commit -a")
+The stash entry is kept in case you need it again.
+PS E:\IT\[JS]-code\221129-demo\045-083api> git reflog
+fa6968d (HEAD -> main) HEAD@{0}: checkout: moving from fork-069 to main
+78e9de2 (fork-069) HEAD@{1}: commit: Lesson #069. Decorators @Logger, @Component, @Prop and @Param
+a15fce3 HEAD@{2}: commit: Lesson #069. Decorators @Logger, @Component and @Method
+a42227d HEAD@{3}: checkout: moving from main to fork-069
+fa6968d (HEAD -> main) HEAD@{4}: checkout: moving from fork-069 to main
+a42227d HEAD@{5}: commit: Lesson #069. Decorators testing
+fa6968d (HEAD -> main) HEAD@{6}: checkout: moving from main to fork-069
+fa6968d (HEAD -> main) HEAD@{7}: commit: Lesson #067. Errod handlers added and checked    
+32c9cc5 (origin/main) HEAD@{8}: commit: Lesson #066. Users-controller. The exercise       
+a35fcaa HEAD@{9}: commit (amend): Lesson #065. Added 'base-controller.ts' & 'routes-interface.ts'
+43d02ec HEAD@{10}: commit: Lesson #065. Added 'base-controller.ts' & 'routes-interface.ts'bc6558b HEAD@{11}: checkout: moving from 33786c7b12e7d03edd3ffd4b2d24fff9dd984398 to main 
+33786c7 HEAD@{12}: checkout: moving from 04514687b7eb95a86d3bc1e45ef231767a14222c to 33786c7b12e7d03edd3ffd4b2d24fff9dd984398
+0451468 (origin/fork-048, fork-048) HEAD@{13}: checkout: moving from root to 0451468      
+43416a9 (origin/root, root) HEAD@{14}: checkout: moving from main to root
+bc6558b HEAD@{15}: commit: Lesson #064. Added class 'Logger'. The first and simplest dependency injection of it in module 'main.ts'
+2842743 HEAD@{16}: commit: Lesson #063. New class App. All works on TypeScript
+7c1ecf7 HEAD@{17}: commit (amend): Lesson #053. Switching to TypeScript. All checked and well tuned
+cf82b00 HEAD@{18}: commit (amend): Lesson #053. Switchin to TypeScript. All checked and well tuned
+adb5c46 HEAD@{19}: commit: Lesson #053. Switchin to typescript. All checked and tuned     
+28287e7 HEAD@{20}: checkout: moving from fork-050 to main
+c24c5c8 (origin/fork-050, fork-050) HEAD@{21}: commit (amend): Lesson #050. Middleware handlers
+f7008c7 HEAD@{22}: commit: Lesson #050. Middleware handlers
+28287e7 HEAD@{23}: checkout: moving from main to fork-050
+28287e7 HEAD@{24}: reset: moving to 28287e724f0821f14650c3ac794a9b70ba295099
+2d3df57 HEAD@{25}: checkout: moving from 28287e724f0821f14650c3ac794a9b70ba295099 to main 
+28287e7 HEAD@{26}: commit (amend): Lesson #050. Simple router
+0e09e55 HEAD@{27}: reset: moving to 0e09e55
+2d3df57 HEAD@{28}: checkout: moving from main to 2d3df57f8b0684a4332f8d29de37dc9059f56c4e 
+2d3df57 HEAD@{29}: checkout: moving from root to main
+43416a9 (origin/root, root) HEAD@{30}: checkout: moving from 43416a981e9c7bbf663a24135ff99e91cbc4eda9 to root
+43416a9 (origin/root, root) HEAD@{31}: checkout: moving from root to 43416a981e9c7bbf663a24135ff99e91cbc4eda9
+43416a9 (origin/root, root) HEAD@{32}: checkout: moving from 2d3df57f8b0684a4332f8d29de37dc9059f56c4e to root
+2d3df57 HEAD@{33}: checkout: moving from main to 2d3df57f8b0684a4332f8d29de37dc9059f56c4e 
+2d3df57 HEAD@{34}: checkout: moving from root to main
+43416a9 (origin/root, root) HEAD@{35}: checkout: moving from main to root
+2d3df57 HEAD@{36}: commit (amend): Before Lesson #049. New branch 'main'
+33786c7 HEAD@{37}: checkout: moving from root to main
+43416a9 (origin/root, root) HEAD@{38}: checkout: moving from 0e09e551b5fd2eb9ed8b0c52bfcafec81b719b43 to root
+0e09e55 HEAD@{39}: commit: Lesson #050. Simple router
+33786c7 HEAD@{40}: reset: moving to 33786c7b12e7d03edd3ffd4b2d24fff9dd984398
+0451468 (origin/fork-048, fork-048) HEAD@{41}: commit (amend): Lesson #048. Simple routing with callbacks
+a68f3ff HEAD@{42}: checkout: moving from 33786c7b12e7d03edd3ffd4b2d24fff9dd984398 to a68f3ff7f5646c59499b6ae526b82adb937bfdfb
 
