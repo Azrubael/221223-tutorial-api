@@ -13,11 +13,27 @@ function Logger() {
    }
 }
 
+function Method(
+   target: Object,
+   propertyKey: string,
+   propertyDescriptor: PropertyDescriptor
+) {
+   console.log(propertyKey)
+   const oldValue = propertyDescriptor.value
+   propertyDescriptor.value = function (...args: any[]) {
+      let q = args[0] * 10
+   console.log(`The propertyDescriptor: ${q}\nThe old value of propertyDescriptor: \n ${oldValue}`)
+      return q
+   }
+
+}
+
 @Logger()
 @Component(69)
 export class User {
    id: number
 
+   @Method
    updateId(newId: number) {
       this.id = newId
       return this.id
@@ -26,3 +42,4 @@ export class User {
 }
 
 console.log(new User().id)
+console.log('The updatedId(2) =', new User().updateId(2))
