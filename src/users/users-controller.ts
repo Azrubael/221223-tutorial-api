@@ -1,7 +1,7 @@
 import { BaseController } from "../common/base-controller"
 import { LoggerService } from "../logger/logger-service"
 import { Request, Response, NextFunction } from 'express'
-// import { HTTPError } from 'logger/logger-service'
+import { HTTPError } from "../errors/http-error-class"
 
 export class UserController extends BaseController {
    // Упражнение
@@ -17,8 +17,7 @@ export class UserController extends BaseController {
    }
 
    login(req: Request, res: Response, next: NextFunction) {
-      this.ok(res, 'Сработала функция \"login\"')
-//      next(new HTTPError(401, 'Ошибка авторизации', 'login'))
+     next(new HTTPError(401, 'Ошибка авторизации при выполнении UserController.login()', 'login error'))
    }
 
    register (req: Request, res: Response, next: NextFunction) {
