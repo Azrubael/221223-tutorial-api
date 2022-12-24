@@ -5,9 +5,10 @@ import { inject, injectable } from "inversify"
 import { ILogger } from "../logger/logger-interface"
 import { TYPES } from "../types"
 import 'reflect-metadata'
+import { IUserController } from "./users-interface"
 
 @injectable()
-export class UserController extends BaseController {
+export class UserController extends BaseController implements IUserController {
    // Упражнение
    // В этом конструкторе вызвать BindRouts() и в нем выполнить п ривязки
    // 'login' и 'register' из ... к соответствующим функциям констру ктора
