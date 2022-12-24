@@ -9,32 +9,32 @@ import 'reflect-metadata'
 
 @injectable()
 export class App {
-   app: Express
-   server: Server
-   port: number
+	app: Express
+	server: Server
+	port: number
 
-   constructor(
-      @inject(TYPES.ILogger) private logger: ILogger,
-      @inject(TYPES.UserController) private userController: UserController,
-      @inject(TYPES.ExceptionFilter) private exceptionFilter: ExceptionFilter
-   ) {
-      this.app = express()
-      this.port = 9001
-   }
+	constructor(
+		@inject(TYPES.ILogger) private logger: ILogger,
+		@inject(TYPES.UserController) private userController: UserController,
+		@inject(TYPES.ExceptionFilter) private exceptionFilter: ExceptionFilter
+	) {
+		this.app = express()
+		this.port = 9001
+	}
 
-   useRoutes() {
-      this.app.use('/users', this.userController.router)
-   }
+	useRoutes(): void {
+		this.app.use('/users', this.userController.router)
+	}
 
-   // создаем обработчик ошибок
-   useExceptionFilters() {
-      this.app.use(this.exceptionFilter.catch.bind(this.exceptionFilter) )
-   }
+	// создаем обработчик ошибок
+	useExceptionFilters(): void {
+		this.app.use(this.exceptionFilter.catch.bind(this.exceptionFilter))
+	}
 
-   public async init() {
-      this.useRoutes()
-      this.useExceptionFilters()
-      this.server = this.app.listen(this.port)
-      console.log(`Сервер запущен на http://localhost:${this.port}`)
-   }
+	public async init(): Promise<void> {
+		this.useRoutes()
+		this.useExceptionFilters()
+		this.server = this.app.listen(this.port)
+		console.log(`Сервер запущен на http://localhost:${this.port}`)
+	}
 }

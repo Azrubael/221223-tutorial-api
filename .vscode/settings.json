@@ -1,0 +1,15 @@
+{
+	"typescript.tsdk": "e:/IT/[JS]-code/221129-demo/045-083api/node_modules/typescript/lib",
+	"[typescript]": {
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
+	},
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true
+	},
+	"eslint.run": "onSave",
+	"eslint.workingDirectories": [
+		"e:/IT/[JS]-code/221129-demo/045-083api/"
+	],
+	"terminal.integrated.cwd": "e:/IT/[JS]-code/221129-demo/045-083api/",
+	"terminal.integrated.tabs.defaultColor": "terminal.ansiBlue"
+}

@@ -25,3 +25,13 @@
 Упражнение:
 1) Сделать интерфейс для юзерконтроллера
 2) Сделать биндинг не на юзерконтроллер, а на его интерфейс
+
+
+2022-12-24 22:00
+>>>>>>>>>073 Eslint и prettier.mp4
+***********************************
+ESLint предназначен для стандартизации разрабоатываемого кода по согласованным правилам автоматически. Есть ESLint для JS и TypeScropt ESLint для TS.
+prettier - автоматический форматтер кода
+	$ npm install -D eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin prettier eslint-config-prettier eslint-plugin-prettier
+	$ git add .
+	$ git commit -m "Lesson #073. ESLint and prettier. There are 13 mistakes... Parsing error: 'version' should be set inside the 'compilerOptions' object of the config json file"
