@@ -25,19 +25,38 @@ function Method(
    console.log(`The propertyDescriptor: ${q}\nThe old value of propertyDescriptor: \n ${oldValue}`)
       return q
    }
+}
 
+function Prop(target: Object, propertyKey: string) {
+   let value: number
+   const getter = () => {
+      console.log('Get the @Prop')
+      return value
+   }
+   const setter = (newValue: number) => {
+   value = newValue
+   console.log('Set the @Prop')
+   }
+// Переопроеделение геттера и сеттера встроенными средствами JavaScript
+   Object.defineProperty(target, propertyKey, {
+      get: getter,
+      set: setter
+   })
+}
+
+function Param(target: Object, propertyKey: string, index: number) {
+   console.log('propertyKey of @Param:', propertyKey,'\nindex of @Param', index)
 }
 
 @Logger()
 @Component(69)
 export class User {
-   id: number
+   @Prop id: number
 
    @Method
-   updateId(newId: number) {
+   updateId(@Param newId: number) {
       this.id = newId
       return this.id
-
    }
 }
 
