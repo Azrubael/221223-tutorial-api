@@ -22,6 +22,7 @@ export class UserController extends BaseController implements IUserController {
 	}
 
 	login(req: Request, res: Response, next: NextFunction): void {
+		console.log('Someting smart :o)')
 		next(
 			new HTTPError(
 				401,
