@@ -31,7 +31,7 @@ F5
 	$ git commit -m "Lesson #079. Data transfer objects (two new classes). Also changed types of parameters 'res' in 'users-controller.ts' ans 
 added useMiddleware in 'app.ts'"
 
-2022-12-25
+2022-12-25 20:20
 >>>>>>>>>080 User entity.mp4
 ***************************************
 User entity - чистые части кода, которые содержат бизнес-логику и никак не зависят от реализации кода. это классы - бизнес-единицы.
@@ -45,7 +45,8 @@ import { hash } from 'bcryptjs'
 export class User {
 	private _password: string
 	constructor(private readonly _email: string,
-		private readonly _name: string) { console.log('') }
+		private readonly _name: string) {
+		console.log('') }
 	get email(): string {
 		return this._email
 	}
@@ -60,3 +61,39 @@ export class User {
 	}
 }
 ~~~~~~~~~~~~~~~~~~~~~~~~
+
+	$ git add .
+	$ git commit -m "Lesson #080. Added and injected 
+class 'User' from 'user-entity.ts'"
+[main b785aac] Lesson #080. Added and injected class 'User' from 'user-entity.ts'
+ 6 files changed, 95 insertions(+), 8 deletions(-)
+	$ git log --graph --oneline --all --decorate     
+* b785aac (HEAD -> main) Lesson #080. Added and injected class 'User' from 'user-entity.ts'
+* 52837bf Lesson #079. Data transfer objects (two new classes). Also changed types of parameters 'res' in 'users-controller.ts' ans added useMiddleware in 'app.ts'
+* 2ee22a8 Lesson #074. Added 'nodemon'
+* 984061b Lesson #073. ESLint and prettier. There are 13 mistakes... Parsing error: 'version' should be set inside the 'compilerOptions' object of the config json file
+* 7534e10 Lesson #072. Improved DI. In new 'users-interface.ts' interface IUserController 
+* 33e4bcb Lesson #071. Dependency injecrion with 'reflect-metadata' and 'inversify'. Added interfaces ILogger, IExceptionFilter and IControllerRoute
+*   ff7c4d5 WIP on main: fa6968d Lesson #067. Errod handlers added and checked
+|\
+| * 09ad654 index on main: fa6968d Lesson #067. Errod handlers added and checked
+|/
+| * 78e9de2 (fork-069) Lesson #069. Decorators @Logger, @Component, @Prop and @Param      
+| * a15fce3 Lesson #069. Decorators @Logger, @Component and @Method
+| * a42227d Lesson #069. Decorators testing
+|/
+* fa6968d Lesson #067. Errod handlers added and checked
+* 32c9cc5 (origin/main) Lesson #066. Users-controller. The exercise
+* a35fcaa Lesson #065. Added 'base-controller.ts' & 'routes-interface.ts'
+* bc6558b Lesson #064. Added class 'Logger'. The first and simplest dependency injection of it in module 'main.ts'
+* 2842743 Lesson #063. New class App. All works on TypeScript
+* 7c1ecf7 Lesson #053. Switching to TypeScript. All checked and well tuned
+| * c24c5c8 (origin/fork-050, fork-050) Lesson #050. Middleware handlers
+|/
+* 28287e7 Lesson #050. Simple router
+* 33786c7 Before Lesson #049. New branch 'main'
+| * 0451468 (origin/fork-048, fork-048) Lesson #048. Simple routing with callbacks        
+|/
+* 43416a9 (origin/root, root) Lesson #047. Simple server with express
+* f275fee Lesson #046. Simple server with switch|case example
+* 4e17099 Lesson #046. Simplest http server

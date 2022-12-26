@@ -1,5 +1,4 @@
 {
-	"typescript.tsdk": "e:/IT/[JS]-code/221129-demo/045-083api/node_modules/typescript/lib",
 	"[typescript]": {
 		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
 	},

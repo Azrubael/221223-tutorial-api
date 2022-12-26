@@ -6,6 +6,7 @@
   "type": "commonjs",
   "scripts": {
     "start": "node dist/main.js",
+    "watch": "tsc --watch",
     "lint": "eslint .",
     "dev": "nodemon",
     "lint:fix": "eslint . --fix",

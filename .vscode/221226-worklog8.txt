@@ -1,0 +1,31 @@
+2022-12-26 10:52
+>>>>>>>>>081 Сервис users.mp4
+***********************************
+Разделение по слоям то, что отвечает за роутинг [т.е контроллер] и то, что отвечает за бизнес-логику [service]. Получится слоеная архитектура.
+Создаем './src/users/user-service.ts' и выносим бизнес-логику туда, а в './src/users/users-controller.ts' оставляем только логику, относящуюся к контроллеру.
+Кроме того создадим './src/users/user-service-interface.ts' для того, чтобы выполнить dependency injection.
+
+
+2022-12-26 12:00
+>>>>>>>>>082 Middleware для роутов.mp4
+***********************************
+Добавим возможность "навешивания" на роуты middleware.
+Доработаем интерфейс IControllerRoute в './src/common/routes-interface.ts'
+~~~~~~~~~~~~~~~~~~~~~
+import { NextFunction, Request, Response, Router } from 'express'
+import { IMiddleware } from './middleware-interface'
+export interface IControllerRoute {
+	path: string
+	func: (req: Request, res: Response, next: NextFunction) => void
+	method: keyof Pick<Router, 'get' | 'post' | 'delete' | 'patch' | 'put'>
+	middlewares?: IMiddleware[]
+}
+export type ExpressReturnType = Response<any, Record<string, any>>
+~~~~~~~~~~~~~~~~~~~~~
+Создадим интерфейс мидлваре './src/common/middleware-interface.ts'
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+import { Request, Response, NextFunction } from 'express'
+export interface IMiddleware {
+	execute: (req: Request, res: Response, next: NextFunction) => void }
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Далее переходим в './base-controller.ts', где редактируем метод 'protected bindRoutes()'
