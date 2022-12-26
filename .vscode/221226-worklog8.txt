@@ -29,3 +29,43 @@ export interface IMiddleware {
 	execute: (req: Request, res: Response, next: NextFunction) => void }
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Далее переходим в './base-controller.ts', где редактируем метод 'protected bindRoutes()'
+
+
+2022-12-26 12:20
+>>>>>>>>>083 Валидация данных.mp4
+******************************************
+Сделаем middleware валидации данных, которые будут передаваться в контроллер, файл './src/common/validate-middleware.ts'
+~~~~~~~~~~~~~~~~~~~~
+import { ClassConstructor, plainToClass } from 'class-transformer'
+import { validate } from 'class-validator'
+import { Request, Response, NextFunction } from 'express-serve-static-core'
+import { IMiddleware } from './middleware-interface'
+
+export class validateMiddleware implements IMiddleware {
+	constructor(private classToValidate: ClassConstructor<object>) {
+		console.log('') }
+	execute({ body }: Request, res: Response, next: NextFunction): void {
+		const instance = plainToClass(this.classToValidate, body)
+		validate(instance).then((errors) => {
+			if (errors.length > 0) { res.status(422).send(errors)
+			} else { next()	}
+		})
+	}
+}
+~~~~~~~~~~~~~~~~~~~~
+Устанавливаем библиотеки для валидации и преобразования данных
+	$ npm install class-validator class-transformer
+class-validator позволяет использовать декораторы (наборы правил, которые мы можем использовать, вызывая функцию validate от какого-то класса, который мы тиражировали)
+class-transformer имеет методы преобразования объектов классов в целевой класс и обратно (инстанциировать классы)
+Добавим в './src/users/dto/user-register-dto.ts' дополнительные декораторы, которые будут сохранять метаданные о том, что нужно валидировать.
+~~~~~~~~~~~~~~~~~~~~~~~~~
+import { IsEmail, IsString } from 'class-validator'
+export class UserRegisterDto {
+	@IsEmail({}, { message: 'Неверно указан email' })
+email: string
+	@IsString({ message: 'Не указан пароль' })
+password: string
+	@IsString({ message: 'Не указано имя' })
+name: string
+}
+~~~~~~~~~~~~~~~~~~~~~~~~~
